@@ -29,7 +29,9 @@ p{background-color: rgb(255, 246, 196);
   color:#003447;
   width: 400px;
   margin: auto;
-  margin-bottom: 5px;}
+  margin-bottom: 5px;
+font-family: "Quicksand", sans-serif;
+  font-size: 17px}
 
 .heading {
   font-family: "Quicksand", sans-serif;
