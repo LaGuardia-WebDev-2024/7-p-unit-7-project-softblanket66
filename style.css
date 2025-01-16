@@ -1,23 +1,41 @@
-body {
-  background-color: pink;
-  text-align: center;
-  color: white;
-  font-family: 'Arial', sans-serif;
+/* Polka Dot Background Found at Link Below
+https://codepen.io/poonam-adlakha/pen/PoRJeKM */
+
+html {
+    background: radial-gradient(#ffaa00 10%, transparent 10%),                    radial-gradient(#FFFFFF 10%,transparent 10%),
+               radial-gradient(beige 10%, transparent 10%) aliceblue;
+    background-size: 100px 100px;
+    background-position: 0 0, 25px 25px, 50px 50px;
+    text-align: center;
 }
 
-h1 {
-    text-decoration: underline;
-}
+h1{
+  background-color: white;
+  border-radius: 20px;
+  color: #ffaa00;
+  width: 400px;
+  margin: auto;
+  margin-bottom: 5px;}
 
-#myCanvas {
-  background-size: 400px;
+h2{background-color: rgb(194, 238, 255);
+  border-radius: 20px;
+  color: #ffaa00;
+  width: 400px;
+  margin: auto;
+  margin-bottom: 5px;}
+
+p{background-color: rgb(255, 246, 196);
+  border-radius: 5px;
+  color:#003447;
+  width: 400px;
+  margin: auto;
+  margin-bottom: 5px;}
+
+.heading {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px
+  }
+#myCanvas{
+  border: 5px solid #ffd900;
   border-radius: 30px;
-  border: 1px solid rgb(255,245,227);
 }
-
-.main{
-  display: flex;
-  text-align: left;
-  justify-content: space-around;
-}
-
