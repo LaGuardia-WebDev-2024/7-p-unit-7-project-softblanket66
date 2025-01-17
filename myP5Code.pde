@@ -3,70 +3,56 @@ void setup() {
     size(400, 400); 
 }
 
-
 //🎯Variable Declarations Go Here
-var x = 10;
-var y = 50;
-var width = 30;
-var height = 30;
+var leftX = 200;
+var rightX = 250;
+var sunRadius = 50;
 
-//🟢Draw Procedure - Runs on Repeat
+
+//🟢Draw Function - Runs on Repeat
 draw = function(){
-  background(151, 244, 247);
+  noStroke()
+
+  //Shapes and Color Go Here
+  background(0, 63, 79);
+
+  // moon
+  fill(245, 222, 105);
+  ellipse(200, 100, sunRadius, sunRadius);
+
+  // clouds 
+  fill(255, 255, 255);
+
+  // left cloud
+  ellipse(leftX, 150, 126, 97);
+  ellipse(leftX+62, 150, 70, 60);
+  ellipse(leftX-62, 150, 70, 60);
+
+  // right cloud
+  ellipse(rightX, 100, 126, 97);
+  ellipse(rightX+62, 100, 70, 60);
+  ellipse(rightX-62, 100, 70, 60);
   
-  //draw a car
-  noStroke();
-  fill(255, 0, 115);
-  rect(x, y + 150, width + 70, height - 10);
-  rect(x + 15, y + 128, width + 40, height + 10);
-  
-  //draw wheels of the car
-  fill(77, 66, 66);
-  ellipse(x + 25, y + 171, width - 5, height - 5);
-  ellipse(x + 75, y + 171, width - 5, height - 5); 
-};
-   
-//🎯Animation Code Goes Here
-draw = function() {
-  background(151, 244, 247);
-  
-  //draw a car
-  noStroke();
-  fill(255, 0, 115);
-  rect(x, y + 150, width + 70, height - 10);
-  rect(x + 15, y + 128, width + 40, height + 10);
-  
-  //draw wheels of the car
-  fill(77, 66, 66);
-  ellipse(x + 25, y + 171, width - 5, height - 5);
-  ellipse(x + 75, y + 171, width - 5, height - 5); 
-  
-  //move the car in x-axis
-  x = x + 2
-  //change size of the car
-  width = width * 1.0015
-  height = height * 1.0015
-  
-  //repeat animation
-  if (x > width + 400) { // Adjust to include the car size
-    x = 10; // Reset to starting position
-    width = 30; // Reset width
-    height = 30; // Reset height
+  leftX +=2;
+  rightX -= 2;
+  sunRadius +=0.3;
+  if(leftX > 600){
+  leftX = 200;
+  rightX =250;
+  sunRadius = 100;
   }
 }
-  
 
 
 //🟡Extra FUN Features Ms. Hall Added
 //Proceed with Caution (and Curiosity!)
 
-showXYPositions = function(){
-    fill(255,255,255)
-    rect(270,300,150,100)
-    fill(0,0,0)
-    textSize(30)
-    text("x = " + mouseX + "\ny = " +mouseY, 290, 350)
-    fill(255,0,255)
-    ellipse(mouseX, mouseY, 10, 10);
-    fill(255,255,255)
+
+//🟡Mouse Pressed Procedue - Runs When Mouse is Pressed on Canvas
+void mousePressed(){
+
+  
 }
+
+
+
